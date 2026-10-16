@@ -215,7 +215,7 @@ All of section 7 is synthesis from sections 1 to 6. Steps are counted at the lev
 | Answer the shared-component question (rules, identity, reporting) | 1 | 1 | 1 |
 | Approximate steps | 5 | 5 to 6 | 4 |
 
-7.6 Reading the scorecard: pool is cheapest to build and to release and costliest to defend per review; silo is the reverse; bridge sits between on build and provisioning and is close to silo on reviews while keeping identity and reporting shared. This restates the AWS pros and cons in 1.4 and 1.6 in step counts and is not a recommendation.
+7.6 Reading the scorecard, from the totals in 7.2 to 7.5: pool has the fewest steps to build (5), to provision a customer (4), and to release rules (3 to 4 regardless of N). Silo has the fewest steps per review (4) and needs 11 to build and 9 per customer. Bridge has the most steps to build (12 to 13), the same as silo to provision (9) and to release rules, and the most per review (5 to 6, against pool's 5), because it carries a shared tier and per-customer templates and must evidence both. What bridge keeps shared is identity, rules distribution, and reporting. This restates the AWS pros and cons in 1.4 and 1.6 in step counts and is not a recommendation.
 
 ## Open items
 
