@@ -1,0 +1,11 @@
+export function NoticeStripView({ text }: { text: string }) {
+  return <div role="status">{text}</div>;
+}
+
+export function noticePause(paused: boolean): string {
+  return paused ? 'paused' : 'running';
+}
+
+export function NoticeStrip({ locale }: { locale: string }) {
+  return <NoticeStripView text={noticePause(locale === 'es')} />;
+}

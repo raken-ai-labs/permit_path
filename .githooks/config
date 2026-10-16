@@ -1,0 +1,22 @@
+# raken-dev-standard v0.6.15: configuración editable del repo (no vendorizada).
+# La sourcean .githooks/pre-push (con set -a: toda clave se exporta) y scripts/gate-format.sh.
+# Las lee el hook: PREPUSH_TEST_CMD, DELETED_REFS_BASE. Las leen los scripts vendorizados:
+# DELETED_REFS_SRC_RE, DELETED_REFS_SKIP_RE, DELETED_REFS_GENERIC (check-deleted-refs.sh) y
+# GATE_REVIEWERS_LINE, GATE_REVIEWER_CMD, GATE_CLAUDE_CONFIG_DIR, GATE_MODEL, GATE_EXTRA_CHECK_CMD (gate.sh). Una clave fuera de estas no tiene lector.
+# PREPUSH_TEST_CMD debe ser proporcional al push: acótalo a lo que cambió entre PREPUSH_REMOTE_SHA y
+# PREPUSH_LOCAL_SHA (los exporta el hook). La suite completa no va en el pre-push; córrela a mano antes del merge.
+PREPUSH_TEST_CMD=''
+DELETED_REFS_BASE=origin/main
+DELETED_REFS_SRC_RE='\.(ts|tsx|js|jsx|mjs|cjs|py|sh|sql|sqlx|go|rb|rs|java|kt)$'
+DELETED_REFS_SKIP_RE='(^|/)(CHANGELOG\.md|DECISIONS\.md|package-lock\.json|pnpm-lock\.yaml|yarn\.lock|uv\.lock|poetry\.lock|\.git|node_modules|\.next|\.venv|dist|coverage)(/|$)'
+# Nombres base que check-deleted-refs no busca (coinciden en todo el árbol); sus exports sí.
+DELETED_REFS_GENERIC='page layout route loading error template default utils util helpers helper types type constants config main app lib common shared mod'
+GATE_REVIEWERS_LINE='5 reviewers ran'
+# gate.sh solo corre /code-review:code-review; con otro revisor se niega y la compuerta va en ventana.
+GATE_REVIEWER_CMD='/code-review:code-review'
+# Perfil de Claude para gate.sh (CLAUDE_CONFIG_DIR de claude -p); vacío = el perfil por omisión. Es de la máquina: cada una lo fija en su entorno, no se commitea. Nunca nombres ~/.claude: cambia la entrada del llavero.
+GATE_CLAUDE_CONFIG_DIR=''
+# Fuerza el modelo del coordinador de gate.sh (--model); vacío = los modelos del plugin y el del perfil.
+GATE_MODEL=''
+# Verificación mecánica que gate.sh corre antes de claude -p, con -R <owner/repo> <PR#> <head>; sale ≠ 0 = el PR vuelve al worker. Vacío = ninguna.
+GATE_EXTRA_CHECK_CMD=''

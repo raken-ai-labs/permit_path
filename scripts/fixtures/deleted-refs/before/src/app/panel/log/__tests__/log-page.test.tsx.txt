@@ -1,0 +1,9 @@
+import LogPage from '../page';
+
+vi.mock('@/components/panel/notice-strip', () => ({
+  NoticeStrip: () => null,
+}));
+
+it('renders', () => {
+  expect(LogPage({ locale: 'es' })).toBeTruthy();
+});
