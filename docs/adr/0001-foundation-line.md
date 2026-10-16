@@ -81,7 +81,7 @@ A new tenant needs no application code change. An infrastructure run is allowed.
 10. Three-level QA pass: technical, business, real users.
 11. A decision on whether pentest scope reopens.
 
-Steps 5, 6, 8 and 9 are the technical part, about six runbook lines under the pool model.
+Under the pool model, the technical steps are 2, 5, 6, 8 and 9. The isolation note's scorecard (7.3) counts four steps for pool because it leaves out the dashboard access in step 8 and the anonymous sign-in toggle in step 6.
 
 ## Options rejected
 

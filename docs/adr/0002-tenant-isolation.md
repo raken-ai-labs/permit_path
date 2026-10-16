@@ -84,4 +84,4 @@ Step counts are from the note's scorecard (7.2 to 7.5), with one customer for th
 
 ## If a customer asks
 
-"PermitPath separates customers by tenant at the database level as well as in the application, and every change that touches data access is tested to show one tenant cannot read another's data; a customer whose contract requires a dedicated environment can be given one from the same build."
+"PermitPath separates customers by tenant at the database level as well as in the application, and every change that touches data access is tested to show one tenant cannot read another's data; PermitPath is built so that a dedicated environment can be added from the same module if a customer's contract requires one."
