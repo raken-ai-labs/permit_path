@@ -5,9 +5,11 @@ Permit readiness for short-term rental hosts. Rules are versioned data; eligibil
 ## Read first, every session and after any compaction
 
 1. This file.
-2. `KICKOFF_PROMPT.md`: the plan, the dates, the open decisions.
-3. `ai_docs/brief.md`, then `ai_docs/research/2026-10-15_intake-review.md`, then the rest of `ai_docs/`.
-4. `GLOSSARY.md` and `docs/adr/` once they exist.
+2. The newest file in `ai_docs/handoff/` (local only): where the last session left things.
+3. `GLOSSARY.md`, `docs/adr/` and `docs/spec/` once they exist: the decisions.
+4. `ai_docs/brief.md`, then `ai_docs/research/` newest first. Research notes are dated and never edited after the fact; a correction is a new dated note.
+
+Dated start documents (the Oct 15 kickoff prompt, the Oct 16 pre-grill brief) are inputs to the phase they started and are not updated afterward.
 
 ## Rules
 
