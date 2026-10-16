@@ -30,3 +30,7 @@ Sonnet agent, single-attempt fetches. Low confidence where only search snippets 
 | Long Beach | Registration; non-primary cap 800 (350 coastal) |
 | Burbank | No ordinance; not a permitted use |
 | Glendale | Hosted-only license; ADUs and RSO excluded |
+
+## Added 2026-10-16
+
+- **LA County Short-Term Rentals Registration Ordinance** (unincorporated County only, not City of LA). County Code Title 7, Division 3, Chapter 7.96. Annual host registration, fee $914, primary residence only, ADUs and rent-restricted units and vacation rentals ineligible, platform obligations, enforcement and appeals. County Counsel analysis revised 2024-03-11. Source: https://ttc.lacounty.gov/wp-content/uploads/2024/05/Short-Term-Rental-Ordinance.pdf. Local copy: `2024-03-11_la-county-str-registration-ordinance.pdf`. One of the roughly seven real permit paths in LA County; out of MVP scope (City of LA only) but a second jurisdiction row for the rules table. Effective date and current fee `[UNVERIFIED]` against the live County Code.
