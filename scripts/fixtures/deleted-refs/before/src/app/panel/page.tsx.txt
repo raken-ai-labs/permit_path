@@ -1,0 +1,9 @@
+import { NoticeStrip } from '@/components/panel/notice-strip';
+
+export default function PanelPage({ locale }: { locale: string }) {
+  return (
+    <main>
+      <NoticeStrip locale={locale} />
+    </main>
+  );
+}

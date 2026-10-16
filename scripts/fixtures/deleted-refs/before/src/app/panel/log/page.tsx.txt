@@ -1,0 +1,9 @@
+import { NoticeStrip } from '@/components/panel/notice-strip';
+
+export default function LogPage({ locale }: { locale: string }) {
+  return (
+    <main>
+      <NoticeStrip locale={locale} />
+    </main>
+  );
+}

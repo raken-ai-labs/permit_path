@@ -1,0 +1,5 @@
+import { NoticeStripView } from '../notice-strip';
+
+it('renders', () => {
+  expect(NoticeStripView({ text: 'x' })).toBeTruthy();
+});
